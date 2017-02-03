@@ -32,7 +32,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity android:name=".WebTarayici">
             <intent-filter>
                 <action android:name="android.intent.action.WebTarayici" />
@@ -40,8 +39,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-
         <activity android:name=".SMS">
             <intent-filter>
                 <action android:name="android.intent.action.SMS" />
@@ -49,7 +46,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
 
         <activity android:name=".Ses">
             <intent-filter>
@@ -59,6 +55,14 @@
             </intent-filter>
         </activity>
 
+
+        <activity android:name=".VideoOyantici">
+            <intent-filter>
+                <action android:name="android.intent.action.VideoOyantici" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -52,20 +52,20 @@ public class Ses extends Activity {
             R.raw.ses, R.raw.kus
     };
 
-    private AudioManager maudioManager;
+    private AudioManager maAudioManager;
     private int mStreamVolume;
-    private SoundPool mSounPool;
+    private SoundPool mSoundPool;
     private int[] mSoundPoolIds = new int[mSesId.length];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ses);
-        maudioManager= (AudioManager)getSystemService(AUDIO_SERVICE);
-        mStreamVolume = maudioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
-        mSounPool = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
-        for (int i = mSesId.length; --i>=0;) {
-            mSoundPoolIds[i] = mSounPool.load(this, mSesId[i], 1);
+        maAudioManager= (AudioManager)getSystemService(AUDIO_SERVICE);
+        mStreamVolume = maAudioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
+        mSoundPool = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
+        for (int i = mSesId.length; --i >=0;) {
+            mSoundPoolIds[i] = mSoundPool.load(this, mSesId[i], 1);
         }
     }
 
@@ -78,11 +78,21 @@ public class Ses extends Activity {
 
                 if (selectedId >= 0) {
 
-                    mSounPool.play(
+                    mSoundPool.play(
                             mSoundPoolIds[selectedId],mStreamVolume,mStreamVolume,1,0,1);
 
-                    break;
+
                 }
+                break;
+
+            case R.id.sesdur:
+
+
+                    mSoundPool.autoPause();
+
+                    break;
+
+
 
 
         }
