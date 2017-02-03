@@ -19,5 +19,5 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="104dp"
         android:layout_marginTop="86dp"
-        android:id="@+id/button2" />
+        android:id="@+id/sms" />
 </RelativeLayout>

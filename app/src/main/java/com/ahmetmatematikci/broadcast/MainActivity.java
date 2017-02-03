@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class MainActivity extends ListActivity {
-    String[] sayfalar = {"BroadCast", "Services", "WebTarayici","SMS"};
+    String[] sayfalar = {"BroadCast", "Services", "WebTarayici","SMS", "Ses"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
